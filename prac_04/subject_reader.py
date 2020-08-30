@@ -14,7 +14,7 @@ def main():
 
 def display_subject_details(data):
     for i in range(len(data)):
-        print(data[i][0], "is taught by", data[i][1], "and has", data[i][2], "students")
+        print("{0} is taught by {1} and has {2} students".format(data[i][0], data[i][1], data[i][2]))
 
 
 def get_data():
