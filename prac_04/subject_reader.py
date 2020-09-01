@@ -8,13 +8,22 @@ FILENAME = "subject_data.txt"
 
 def main():
     data = get_data()
-    print(data)
-    display_subject_details(data)
+    display_data(data)
 
 
-def display_subject_details(data):
-    for i in range(len(data)):
-        print("{0} is taught by {1} and has {2} students".format(data[i][0], data[i][1], data[i][2]))
+def get_longest_name(data):
+    longest_name = 0
+    for data_point in data:
+        if len(data_point[1]) > longest_name:
+            longest_name = len(data_point[1])
+        return longest_name
+
+
+def display_data(data):
+    longest_name = get_longest_name(data)
+    for data_point in data:
+        print("{} is taught by {:<{}} and has {:>3} students".format(data_point[0], data_point[1],
+                                                                     longest_name, data_point[2]))
 
 
 def get_data():
