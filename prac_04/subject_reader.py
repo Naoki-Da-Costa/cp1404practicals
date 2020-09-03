@@ -7,11 +7,13 @@ FILENAME = "subject_data.txt"
 
 
 def main():
+    """Read data file and display it."""
     data = get_data()
     display_data(data)
 
 
 def get_longest_name(data):
+    """Get longest name from data."""
     longest_name = 0
     for data_point in data:
         if len(data_point[1]) > longest_name:
@@ -20,6 +22,7 @@ def get_longest_name(data):
 
 
 def display_data(data):
+    """Display data file."""
     longest_name = get_longest_name(data)
     for data_point in data:
         print("{} is taught by {:<{}} and has {:>3} students".format(data_point[0], data_point[1],
