@@ -11,7 +11,6 @@ COLOUR = input("Colour? ")
 while COLOUR != "":
     if COLOUR in COLOUR_TO_HEX:
         print(COLOUR_TO_HEX[COLOUR])
-        COLOUR = input("Colour? ")
     else:
         print("Invalid colour")
-        COLOUR = input("Colour? ")
+    COLOUR = input("Colour? ")
