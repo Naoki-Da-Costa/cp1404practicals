@@ -1,5 +1,6 @@
 from prac_08.taxi import Taxi
 from prac_08.silver_service_taxi import SilverServiceTaxi
+
 MENU = "q)uit, c)hoose taxi, d)rive"
 
 
@@ -16,7 +17,6 @@ def main():
             print_taxis(taxis)
             taxi_choice = int(input("Choose taxi: "))
             current_taxi = taxis[taxi_choice]
-            # total_fare += current_taxi.get_fare()  # required?
             print("Bill to date: ${:.2f}".format(total_fare))
         elif menu_choice == "d":
             current_taxi.start_fare()
@@ -26,7 +26,7 @@ def main():
             total_fare += current_taxi.get_fare()
             print("Bill to date: ${:.2f}".format(total_fare))
         else:
-            print("Invalid input")
+            print("Invalid choice")
         print(MENU)
         menu_choice = input(">>> ")
     print("Total trip cost: ${:.2f}".format(total_fare))

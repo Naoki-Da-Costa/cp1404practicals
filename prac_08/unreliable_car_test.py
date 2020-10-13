@@ -6,4 +6,3 @@ print(new_car.current_fare_distance)
 new_car.drive(20)
 print(new_car)
 print(new_car.current_fare_distance)
-
